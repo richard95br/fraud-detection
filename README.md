@@ -292,14 +292,9 @@ Para grandes volumes (>100k transações), considerar:
 
 Sugestões de melhorias são bem-vindas! Áreas de interesse:
 
-- [ ] Velocity rules (múltiplas transações em curto tempo)
-- [ ] Structuring detection (valores 9.999,99, 1.999,88, etc)
-- [ ] Split payment detection
-- [ ] Wishlist por estabelecimento
-- [ ] Failed transaction patterns
-- [ ] Machine learning scoring
-- [ ] Testes unitários
-- [ ] Documentação em PDF
+- [ ] Circular 4.001
+- [ ] Circular 3.978
+- [ ] PLD/AML
 
 ## Licença
 
