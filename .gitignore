@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Arquivos de saída gerados localmente
+fraud_detection_alerts.csv
+output_alerts.csv
+*.log
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Dados reais ou sensíveis
+/data/raw/
+/data/private/
+*.xlsx
+*.xls
