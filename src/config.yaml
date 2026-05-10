@@ -1,0 +1,54 @@
+# Fraud Detection Engine - Configuration File
+
+# Detecção de transações repetidas em janela de tempo
+repeated_transactions:
+  time_window_hours: 1
+  min_value: 0
+  generic_portadores: []
+
+# Detecção de autofinanciamento
+autofinancing:
+  similarity_threshold: 70  # percentual de similaridade
+
+# Limpeza de portadores genéricos
+generic_portadores:
+  - "TESTE"
+  - "TESTE PORTADOR"
+  - "INVALID"
+
+# Horários comerciais
+business_hours:
+  start_hour: 7
+  end_hour: 21
+  high_value_threshold: 1000  # valor mínimo fora de horário pra gerar alerta
+
+# Transações em finais de semana/feriados
+weekend_holidays:
+  off_hours_threshold: 1000      # valor pra transação fora de horário
+  general_threshold: 1000         # valor geral pra fim de semana/feriado
+
+# Limites por tipo de estabelecimento
+establishment_type:
+  individual_limit: 1000         # Pessoa Física
+  corporate_limit: 5000          # Pessoa Jurídica
+
+# Média presencial
+average_check:
+  multiplier: 1.5                # quanto acima da média dispara alerta
+  default_average: 450           # padrão se não encontrar média
+
+# Pesos dos alertas (para priorização)
+alert_weights:
+  repeated_transactions: 3
+  autofinancing: 5
+  restricted_portador: 10
+  business_hours_violation: 2
+  weekend_holiday: 2
+  mcc_limit_exceeded: 4
+  establishment_type_limit: 3
+  above_average: 2
+
+# Filtros padrão
+filters:
+  transaction_status: "APPROVED"  # apenas transações aprovadas
+  min_value: 0                    # valor mínimo pra processar
